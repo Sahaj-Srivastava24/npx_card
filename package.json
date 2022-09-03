@@ -1,6 +1,6 @@
 {
   "name": "mad1ad",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "A CLI tool to show my profile information.",
   "main": "dist/index.js",
   "bin": {
