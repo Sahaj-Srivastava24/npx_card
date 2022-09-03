@@ -1,3 +1,1 @@
-module.export = {
-  extends: ['./commitlint.base.js', './commitlint.types.js'],
-}
+module.exports = { extends: ['@commitlint/config-conventional'] }
