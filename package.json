@@ -1,21 +1,22 @@
 {
   "name": "mad1ad",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A CLI tool to show my profile information.",
-  "main": "dist/index.js",
-  "bin": "dist/index.js",
+  "main": "index.js",
+  "bin": {
+    "mad1ad": "./index.js"
+  },
   "scripts": {
     "watch": "nodemon",
     "dev": "npx tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:all": "rm -r dist && rm -r node_modules && rm package-lock.json",
-    "clean:compile": "rm -r dist && rm -r node_modules && rm package-lock.json",
+    "clean:compile": "rm -r dist",
     "style:lint": "eslint . --ext .ts",
     "style:prettier": "prettier --check \"**/*.+(js|ts|json)\"",
     "style:prettier-write": "prettier --write \"**/*.+(js|ts|json)\"",
     "style:all": "npm run style:lint && npm run style:prettier",
-    "prepare": "husky install",
-    "package": ""
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,7 @@
     "download": "^8.0.0",
     "husky": "^8.0.1",
     "inquirer": "^8.1.0",
+    "mad1ad": "^1.4.0",
     "open": "^8.4.0",
     "pkg": "^5.8.0"
   },
