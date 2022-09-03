@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "watch": "nodemon",
-    "dev": "node dist/app.js",
+    "clean": "rm -r dist",
+    "dev": "npm run clean && npx tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "style:lint": "eslint . --ext .ts",
     "style:prettier": "prettier --check \"**/*.+(js|ts|json)\"",
@@ -45,13 +46,16 @@
     "@types/clui": "^0.3.1",
     "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.1",
-    "boxen": "^7.0.0",
-    "chalk": "^5.0.1",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.2",
     "clear": "^0.1.0",
+    "cli-format": "^3.0.9",
     "clui": "^0.3.6",
+    "download": "^8.0.0",
     "figlet": "^1.5.2",
     "husky": "^8.0.1",
-    "inquirer": "^9.1.1"
+    "inquirer": "^8.1.0",
+    "open": "^8.4.0"
   },
   "files": [
     "dist/**/*"
