@@ -1,25 +1,34 @@
 {
   "name": "mad1ad",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A CLI tool to show my profile information.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "watch": "nodemon",
-    "clean": "rm -r dist",
-    "dev": "npm run clean && npx tsc && node dist/index.js",
+    "dev": "npx tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:all": "rm -r dist && rm -r node_modules && rm package-lock.json",
+    "clean:compile": "rm -r dist && rm -r node_modules && rm package-lock.json",
     "style:lint": "eslint . --ext .ts",
     "style:prettier": "prettier --check \"**/*.+(js|ts|json)\"",
     "style:prettier-write": "prettier --write \"**/*.+(js|ts|json)\"",
     "style:all": "npm run style:lint && npm run style:prettier",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "package": ""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sahaj-Srivastava24/npx_card.git"
   },
-  "keywords": [],
-  "author": "Sahaj Srivastava",
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Sahaj Srivastava <srivastavasahaj24@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sahaj-Srivastava24/npx_card/issues"
@@ -44,7 +53,6 @@
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.2",
     "@types/clui": "^0.3.1",
-    "@types/figlet": "^1.5.5",
     "@types/inquirer": "^9.0.1",
     "boxen": "^4.2.0",
     "chalk": "^4.1.2",
@@ -52,10 +60,13 @@
     "cli-format": "^3.0.9",
     "clui": "^0.3.6",
     "download": "^8.0.0",
-    "figlet": "^1.5.2",
     "husky": "^8.0.1",
     "inquirer": "^8.1.0",
-    "open": "^8.4.0"
+    "open": "^8.4.0",
+    "pkg": "^5.8.0"
+  },
+  "pkg": {
+    "scripts": "dist/**/*"
   },
   "files": [
     "dist/**/*"
