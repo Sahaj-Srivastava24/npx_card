@@ -44,7 +44,7 @@ const dataString = `
   ${data.labelGitHub}  ${data.github}
   ${data.labelLinkedIn}  ${data.linkedin}
   ${data.labelTwitter}  ${data.twitter}
-  ${data.labelWeb}  ${data.web}lhj
+  ${data.labelWeb}  ${data.web}
   ${data.labelCard}  ${data.npx}
   
   ${formattedMessage}

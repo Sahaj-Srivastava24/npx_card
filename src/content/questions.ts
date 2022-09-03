@@ -1,6 +1,7 @@
 import chalk from 'chalk'
 import open from 'open'
 import download from 'download'
+import CLI from 'clui'
 import { Answers, QuestionCollection } from 'inquirer'
 
 const mailToMe = () => {
@@ -9,10 +10,22 @@ const mailToMe = () => {
 }
 
 const downloadResume = () => {
+  const spinner = new CLI.Spinner('Downloading your file..!', [
+    '⣾',
+    '⣽',
+    '⣻',
+    '⢿',
+    '⡿',
+    '⣟',
+    '⣯',
+    '⣷',
+  ])
+  spinner.start()
   const resumeUrl =
     'https://drive.google.com/uc?export=download&id=1lVGVl-GSAp0_Di1LwKCVqrb8S5eYeX7m'
   const fileDir = process.cwd()
   download(resumeUrl, fileDir).then(() => {
+    spinner.stop()
     console.log('File downloaded successfully!')
     open(`${fileDir}/resume_mad1ad.pdf`)
   })
